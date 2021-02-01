@@ -20,7 +20,7 @@
                 <div class="input-section half-width">
                     <input id="calculator-dialBox" class="form-control" type="text">
                     <div class="numbers">
-                        <div class="calc-body">
+                        <div id="button-Container" class="calc-body">
                             <div class="calc-button-row">
                               <div class="button">7</div>
                               <div class="button">8</div>
@@ -68,6 +68,23 @@
             // document.getElementById("generate-pin-dialBox").value=r;
         }
         })
+
+        //handle calculator button event
+      const buttonContainerBtn=document.getElementById("button-Container");
+      buttonContainerBtn.addEventListener('click',function(event)
+      {
+      const digit=event.target.innerText;
+      if(isNaN(digit))
+      {
+
+      }
+      else
+      {
+        var calculatordialBoxValue=document.getElementById('calculator-dialBox');
+        calculatordialBoxValue.value=calculatordialBoxValue.value+digit;
+      }
+      })
+
 
         const submitBtn=document.getElementById('submit-button');
         submitBtn.addEventListener('click',function()
