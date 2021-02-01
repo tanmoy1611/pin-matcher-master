@@ -83,12 +83,16 @@
         if(calculatordialBoxValueNumber==generatedialBoxNumberNew){
         // console.log(' Pin Matched... Secret door is opening for you');
         document.getElementById("notifyCorrect").style.display='block'
-       
+        document.getElementById("notifyWrong").style.display='none'
         }
 else
 {
     document.getElementById("notifyWrong").style.display='block'
+    document.getElementById("notifyCorrect").style.display='none'
 }
+document.getElementById('calculator-dialBox').value="";
+document.getElementById("generate-pin-dialBox").value="";
+
         })
     </script>
 </body>
